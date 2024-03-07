@@ -1,14 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
+import MoleImg from './images/mole.png'
 
-function Mole() {
-/* 
-    - Represent a displayed mole, that will render when displayMole (in MoleContainer) === true.
-    - Contain a timer determining the lifespan of a mole.
-    - A useEffect hook that will start the timer and clean it up afterward.
-*/
+function Mole(props) {
+
+    useEffect(() => {
+        let seconds = Math.ceil(Math.random() * 5000)
+        let timer = setTimeout(() => {
+            props.toggle(false)
+        }, seconds)
+        return () => clearTimeout(timer)
+    })
+
     return (
         <div className="mole-div">
-            <h2>Mole</h2>
+            <img src={MoleImg} alt="mole" onClick={props.handleClick}/>
         </div>
     )
 }

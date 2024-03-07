@@ -1,12 +1,9 @@
+//dependencies
 import './App.css';
 import React, {useState} from 'react';
 import MoleContainer from './MoleContainer';
 
 function App() {
-/* 
-  - Store the score state variable
-  - Create a function to generate the nine MoleContainers
-*/
 
   let [score, setScore] = useState(0)
 

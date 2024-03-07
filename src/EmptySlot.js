@@ -1,14 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
+import MoleHill from './images/molehill.png'
 
-function EmptySlot() {
-/* 
-    - Represents an empty molehill/invalid location to click. Will render when displayMole (in MoleContainer) === false.
-    - Contain an internal timer to cycle the display.
-    - A useEffect hook that will start the timer and clean it up afterward.
-*/
+function EmptySlot(props) {
+
+    useEffect(() => {
+        let seconds = Math.ceil(Math.random() * 5000)
+        let timer = setTimeout(() => {
+            props.toggle(true)
+        }, seconds)
+        return () => clearTimeout(timer)
+    })
+
     return (
         <div className="empty-slot">
-            <h2>Empty Slot</h2>
+            <img src={MoleHill} alt="molehill"/>
         </div>
     )
 }
