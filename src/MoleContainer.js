@@ -2,7 +2,7 @@ import React from "react";
 import Mole from './Mole.js'
 import EmptySlot from "./EmptySlot.js";
 
-function MoleContainer() {
+function MoleContainer(props) {
 /* 
     - Component that decides which child will be rendered.
     - Store a Boolean state variable called displayMole here.
