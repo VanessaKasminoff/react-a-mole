@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <h1>React-A-Mole!</h1>
       <div className='score-container'>
-        {score}
+        <p>Score: {score}</p>
       </div>
       {createMoleHill()}
     </div>

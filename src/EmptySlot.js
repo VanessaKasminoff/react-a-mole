@@ -11,9 +11,13 @@ function EmptySlot(props) {
         return () => clearTimeout(timer)
     })
 
+    const handleEmptyClick = () => {
+        props.setScore(props.score - 5)
+    }
+
     return (
         <div className="empty-slot">
-            <img src={MoleHill} alt="molehill"/>
+            <img src={MoleHill} alt="molehill" onClick={handleEmptyClick}/>
         </div>
     )
 }
