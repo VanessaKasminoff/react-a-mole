@@ -17,7 +17,7 @@ function EmptySlot(props) {
 
     return (
         <div className="empty-slot">
-            <img src={MoleHill} alt="molehill" onClick={handleEmptyClick}/>
+            <img src={MoleHill} alt="molehill" onClick={handleEmptyClick} draggable={false}/>
         </div>
     )
 }

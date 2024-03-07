@@ -13,7 +13,7 @@ function Mole(props) {
 
     return (
         <div className="mole-div">
-            <img src={MoleImg} alt="mole" onClick={props.handleClick}/>
+            <img src={MoleImg} alt="mole" onClick={props.handleClick} draggable={false}/>
         </div>
     )
 }
